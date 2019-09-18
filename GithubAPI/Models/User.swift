@@ -25,10 +25,13 @@ class User: Mappable {
 class Users: Mappable {
     
     var items: [User] = []
+    var totalCount: Int = 0
     
     required init?(map: Map) {}
     
     func mapping(map: Map) {
+        
         items <- map["items"]
+        totalCount <- map["total_count"]
     }
 }
